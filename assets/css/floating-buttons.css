@@ -1,0 +1,75 @@
+/* =========================================
+   FLOATING BUTTONS (WA & BACK-TO-TOP)
+========================================= */
+.floating-wa,
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+.back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0) translateY(20px);
+}
+
+.floating-wa {
+    bottom: 85px;
+    background-color: #25D366;
+    animation: float-animation 3s ease-in-out infinite;
+}
+
+.floating-wa:hover {
+    background-color: #1fb855;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+.back-to-top {
+    bottom: 20px;
+    background-color: #047857;
+}
+
+.back-to-top:hover {
+    background-color: #047857;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+    color: white;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
+
+@keyframes float-animation {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1); }
+}
+
+@media (max-width: 575.98px) {
+    .floating-wa,
+    .back-to-top {
+        right: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .floating-wa { bottom: 70px !important; }
+    .back-to-top { bottom: 15px !important; }
+}
