@@ -112,10 +112,9 @@ img {
 
 /* Swap hamburger Ã¢â€ â€ X saat menu mobile dibuka */
 .navbar-toggler { transition: transform 0.25s ease; }
+.navbar-toggler .nav-close-icon { display: none !important; }
 .navbar-toggler[aria-expanded="true"] .nav-toggle-icon { display: none !important; }
 .navbar-toggler[aria-expanded="true"] .nav-close-icon  { display: inline !important; }
-.navbar-toggler[aria-expanded="false"] .nav-toggle-icon { display: inline !important; }
-.navbar-toggler[aria-expanded="false"] .nav-close-icon  { display: none !important; }
 
 .hero-section {
     min-height: 100vh; min-height: 100svh; background-size: cover; background-position: center; background-attachment: fixed; position: relative; display: flex; align-items: center; padding-top: 80px; padding-bottom: 80px; overflow: hidden;
